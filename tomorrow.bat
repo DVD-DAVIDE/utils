@@ -8,7 +8,11 @@ rem Get day, month, year from variable.
 rem To extract part of a string you use the format %var:~offset,length%
 rem You may want to change it depending on your locale.
 set /a d=%date:~0,2%
+if "%date:~0,2%" == "08" (set /a d=8)
+if "%date:~0,2%" == "09" (set /a d=9)
 set /a m=%date:~3,2%
+if "%date:~3,2%" == "08" (set /a m=8)
+if "%date:~3,2%" == "09" (set /a m=9)
 set /a y=%date:~6,4%
 
 rem Change to next day.

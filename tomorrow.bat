@@ -1,19 +1,20 @@
 @echo off
 
 rem tomorrow.bat v0.2
-rem 22/03/2023
+rem 2024-22-01
 rem DVD-DAVIDE's utils (https://github.com/DVD-DAVIDE/utils)
 
 rem Get day, month, year from variable.
 rem To extract part of a string you use the format %var:~offset,length%
 rem You may want to change it depending on your locale.
-set /a d=%date:~0,2%
+rem echo %date%
+set /a d=%date:~8,2%
 if "%date:~0,2%" == "08" (set /a d=8)
 if "%date:~0,2%" == "09" (set /a d=9)
-set /a m=%date:~3,2%
+set /a m=%date:~5,2%
 if "%date:~3,2%" == "08" (set /a m=8)
 if "%date:~3,2%" == "09" (set /a m=9)
-set /a y=%date:~6,4%
+set /a y=%date:~0,4%
 
 rem Change to next day.
 rem If the day is greater than 31, change it back to 1 and increment the month.
